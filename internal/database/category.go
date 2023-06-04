@@ -39,7 +39,7 @@ func (c *Category) FindAll() ([]Category, error) {
 
 	defer rows.Close()
 
-	var categories []Category
+	categories := []Category{}
 
 	for rows.Next() {
 		var id string
